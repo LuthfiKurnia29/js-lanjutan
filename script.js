@@ -185,14 +185,48 @@
     // let panggilNama = init();
     // panggilNama('Hadi');
 
-    function ucapkanSalam(waktu){
-        return function(nama){
-            console.log(`Halo ${nama}, Selamat ${waktu}, Semoga harimu menyenangkan!`)
-        }
-    }
+    // function ucapkanSalam(waktu){
+    //     return function(nama){
+    //         console.log(`Halo ${nama}, Selamat ${waktu}, Semoga harimu menyenangkan!`)
+    //     }
+    // }
     
-    let selamatPagi = ucapkanSalam('Pagi');
-    let selamatSiang = ucapkanSalam('Siang');
-    let selamatMalam = ucapkanSalam('Malam');
+    // let selamatPagi = ucapkanSalam('Pagi');
+    // let selamatSiang = ucapkanSalam('Siang');
+    // let selamatMalam = ucapkanSalam('Malam');
     
-    selamatPagi('Luthfi');
+    // selamatPagi('Luthfi');
+
+
+    // 3.3 Arrow Function
+        // Function Expression
+        // const tampilNama = function (nama) {
+        //     return `Halo ${nama}`;
+        // }
+        // console.log(tampilNama('Luthfi'));
+
+        // Implisit Return
+        // const tampilNama = nama =>  `Halo ${nama}`;
+        // console.log(tampilNama('Luthfi'));
+
+        // const tampilNama = (nama, waktu) => {
+        //     return `Selamat ${waktu}, ${nama}`;
+        // }
+        // console.log(tampilNama('Dika', 'Siang'));
+
+        // const tampilNama = () => `Hello World!`;
+        // console.log(tampilNama());
+
+        let mahasiswa = ['Sandhika Galih', 'Doddy Ferdiansyah', 'Erik'];
+        // let jumlaHuruf = mahasiswa.map(function(nama){
+        //     return nama.length;
+        // });
+        // console.log(jumlaHuruf);
+
+        // Arrow Function
+        // let jumlaHuruf = mahasiswa.map( nama => nama.length);
+        // console.log(jumlaHuruf);
+
+        //Kembalian Berupa Object
+        let jumlaHuruf = mahasiswa.map( nama => ({ nama, jmlHuruf: nama.length }));
+        console.table(jumlaHuruf);
