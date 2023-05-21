@@ -217,16 +217,74 @@
         // const tampilNama = () => `Hello World!`;
         // console.log(tampilNama());
 
-        let mahasiswa = ['Sandhika Galih', 'Doddy Ferdiansyah', 'Erik'];
-        // let jumlaHuruf = mahasiswa.map(function(nama){
-        //     return nama.length;
-        // });
-        // console.log(jumlaHuruf);
+            // let mahasiswa = ['Sandhika Galih', 'Doddy Ferdiansyah', 'Erik'];
+            // let jumlaHuruf = mahasiswa.map(function(nama){
+            //     return nama.length;
+            // });
+            // console.log(jumlaHuruf);
 
         // Arrow Function
-        // let jumlaHuruf = mahasiswa.map( nama => nama.length);
-        // console.log(jumlaHuruf);
+            // let jumlaHuruf = mahasiswa.map( nama => nama.length);
+            // console.log(jumlaHuruf);
 
         //Kembalian Berupa Object
-        let jumlaHuruf = mahasiswa.map( nama => ({ nama, jmlHuruf: nama.length }));
-        console.table(jumlaHuruf);
+            // let jumlaHuruf = mahasiswa.map( nama => ({ nama, jmlHuruf: nama.length }));
+            // console.table(jumlaHuruf);
+
+        // Konsep this pd arrow function
+            //Constructor Function
+            // const Mahasiswa = function(){
+            //     this.nama = 'Luthfi';
+            //     this.umur = 19;
+            //     this.sayHello = function(){
+            //         console.log(`Halo, nama saya ${this.nama}, dan saya ${this.umur} tahun`)
+            //     }
+            // }
+            // const Luthfi = new Mahasiswa();
+
+            //Arrow Function
+            // const Mahasiswa = function(){
+            //     this.nama = 'Luthfi';
+            //     this.umur = 19;
+            //     this.sayHello = () => {
+            //         console.log(`Halo, nama saya ${this.nama}, dan saya ${this.umur} tahun`)
+            //     }
+            // }
+            // const Luthfi = new Mahasiswa();
+
+            // Object Literal
+            // const mhs1 = {
+            //     nama: 'Luthfi',
+            //     umur: 19,
+            //     sayHello: () => {
+            //         console.log(`Halo, nama saya ${this.nama}, dan saya ${this.umur} tahun`);
+            //         console.log(this);
+            //     }
+            // }
+
+            // const Mahasiswa = function(){
+            //     this.nama = 'Luthfi';
+            //     this.umur = 19;
+            //     this.sayHello = function(){
+            //         console.log(`Halo, nama saya ${this.nama}, dan saya ${this.umur} tahun`)
+            //     }
+
+            //     setInterval(() => {
+            //         console.log(this.umur++)
+            //     }, 500);
+            // }
+            // const Luthfi = new Mahasiswa();
+
+const box = document.querySelector('.box');
+box.addEventListener('click', function() {
+    let satu = 'size';
+    let dua = 'caption';
+
+    if(this.classList.contains(satu)){
+        [satu, dua] = [dua, satu];
+    }
+    this.classList.toggle(satu);
+    setTimeout(() => {
+    this.classList.toggle(dua );
+    }, 600);
+});
